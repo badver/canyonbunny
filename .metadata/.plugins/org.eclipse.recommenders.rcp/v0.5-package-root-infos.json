@@ -1,0 +1,366 @@
+[
+  {
+    "symbolicName": "gdx-backend-android-sources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "210772862882fa1adb94963a3785c9629eb32295",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-android/libs/gdx-backend-android-sources.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-lwjgl",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4fcf423a388e53a50d75facba63ae89a752e1ed5",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-desktop/libs/gdx-backend-lwjgl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "be4124ecceb37230419f0f31ea6e7d50babb4973",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-sources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "225a9f27c471d9f4ee238fd836d0bae3c1174007",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny/libs/gdx-sources.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-gwt-sources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "53ba3cbb81deba9af9d402e45b4dc8f5b33e9e75",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-html/war/WEB-INF/lib/gdx-backend-gwt-sources.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8fc3af3d0e2d85398fa6af245a08a26848734731",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.james.apache-mime4j",
+    "version": {
+      "major": 0,
+      "minor": 6,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b43fe07841b100c5f8cde7d5e855fc294f6a56f4",
+    "jarFileModificationDate": "2014-01-23T12:33:38+04:00",
+    "location": "/home/wish/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.6.0/gwt-2.6.0/gwt-dev.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1826204b0e05aef412b595321866f7d190e0498d",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/ext/sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e5f676ac3f301adf72fe2c99f20be3e3ec2aefca",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/ext/localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx-backend-android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "04aecb29561d1032e5dcd073a165ebe543d4793b",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-android/libs/gdx-backend-android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5e51ce82a095b4a23291b1cd35e6f1488efc5776",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/ext/sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "annotations",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "02828555fb52ebec1b5652478df2c7cc3dc6e84b",
+    "jarFileModificationDate": "2013-10-24T23:46:51+04:00",
+    "location": "/home/wish/android-sdk/tools/support/annotations.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-lwjgl-natives",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c539f2c7d14189f5dc57306727587d1184e17773",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-desktop/libs/gdx-backend-lwjgl-natives.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f90ebbb8198a741f1d0dd567c075195fd5af90f8",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "javax.validation.validation-api",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "GA"
+    },
+    "jarFileFingerprint": "b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e",
+    "jarFileModificationDate": "2013-11-21T12:18:22+04:00",
+    "location": "/home/wish/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.6.0/gwt-2.6.0/validation-api-1.0.0.GA.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-backend-gwt",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8770f2d145128aad87f559f90bcd1ad6b43efbde",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-html/war/WEB-INF/lib/gdx-backend-gwt.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5e1750ab236a90fcdd48157472f3fa21f74ecec6",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f8166655d74cfbc622390ca32f2b8966e2761b78",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/ext/dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "gdx",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8fb84de298e71eb82cd7e3cf5d8a7eeaab955659",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny/libs/gdx.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gwt-user",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "36493fb55c84368ea43451f799f0b0ae0bbed11e",
+    "jarFileModificationDate": "2014-01-23T12:34:22+04:00",
+    "location": "/home/wish/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.6.0/gwt-2.6.0/gwt-user.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx-natives",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "78038c5385768161753b7ab5e36c611c4eb78ab5",
+    "jarFileModificationDate": "2014-02-03T22:54:37+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-desktop/libs/gdx-natives.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "95dc9053062d68cde4e8c38494cc63aefd7b0a42",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/ext/sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8ef275643beeef867d8799caf702441be2697857",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fe38edb31145fe0dcd95b278c6069efac07cf2d6",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "android",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "92822ec981a4d0a7f002c792e7b3b60f9a1f26fa",
+    "jarFileModificationDate": "2014-02-03T01:05:57+04:00",
+    "location": "/home/wish/android-sdk/platforms/android-15/android.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "validation-api-1.0.0.GA-sources",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7a561191db2203550fbfa40d534d4997624cd369",
+    "jarFileModificationDate": "2013-11-21T12:18:22+04:00",
+    "location": "/home/wish/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.6.0/gwt-2.6.0/validation-api-1.0.0.GA-sources.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gdx",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8fb84de298e71eb82cd7e3cf5d8a7eeaab955659",
+    "jarFileModificationDate": "2014-02-04T00:18:07+04:00",
+    "location": "/media/wish/Data/Programming/eclipse workspace/canyonbunny/CanyonBunny-html/war/WEB-INF/lib/gdx.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c186ae37c41aa1f3dfa11d86bbd673c79a5c20ef",
+    "jarFileModificationDate": "2014-02-02T23:56:54+04:00",
+    "location": "/usr/lib/jvm/java-7-oracle/jre/lib/ext/zipfs.jar",
+    "javaRuntime": true
+  }
+]
