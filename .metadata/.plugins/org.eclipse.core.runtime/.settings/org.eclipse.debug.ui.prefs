@@ -4,4 +4,5 @@ org.eclipse.debug.ui.consoleBackground=31,34,35
 org.eclipse.debug.ui.errorColor=165,123,97
 org.eclipse.debug.ui.inColor=224,226,228
 org.eclipse.debug.ui.outColor=224,226,228
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
 preferredTargets=default\:default|
