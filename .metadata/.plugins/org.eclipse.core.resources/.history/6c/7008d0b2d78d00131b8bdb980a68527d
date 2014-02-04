@@ -1,0 +1,18 @@
+package ru.badver.study.canyonbunny.game.objects;
+
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+
+public class Rock extends AbstractGameObject {
+	private TextureRegion regEdge;
+	private TextureRegion regMiddle;
+	private int length;
+
+
+	@Override
+	public void render(SpriteBatch batch) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -982,3 +982,9 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.ui 4 4 2014-02-04 23:48:45.041
 !MESSAGE Plug-in 'org.melord.android.adt.ext' contributed an invalid Menu Extension (Path: 'org.melord.android.adt.ext.menu1' is invalid): org.melord.android.adt.ext.newActivity
+
+!ENTRY org.eclipse.ui 4 4 2014-02-05 00:56:32.085
+!MESSAGE Plug-in 'org.melord.android.adt.ext' contributed an invalid Menu Extension (Path: 'org.melord.android.adt.ext.menu1' is invalid): org.melord.android.adt.ext.newActivity
+
+!ENTRY org.eclipse.ui 4 4 2014-02-05 01:07:09.014
+!MESSAGE Plug-in 'org.melord.android.adt.ext' contributed an invalid Menu Extension (Path: 'org.melord.android.adt.ext.menu1' is invalid): org.melord.android.adt.ext.newActivity
