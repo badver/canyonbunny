@@ -988,3 +988,41 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.ui 4 4 2014-02-05 01:07:09.014
 !MESSAGE Plug-in 'org.melord.android.adt.ext' contributed an invalid Menu Extension (Path: 'org.melord.android.adt.ext.menu1' is invalid): org.melord.android.adt.ext.newActivity
+!SESSION 2014-02-05 01:18:12.189 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui.navigator 2 0 2014-02-05 01:18:16.427
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.core 4 0 2014-02-05 01:34:01.851
+!MESSAGE An exception occurred during push on URI https://github.com/badver/canyonbunny.git: https://github.com/badver/canyonbunny.git: Missing unknown 720cd21f80197845070aeafcf4a35adc13f935c3
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/badver/canyonbunny.git: Missing unknown 720cd21f80197845070aeafcf4a35adc13f935c3
+	at org.eclipse.jgit.transport.BasePackPushConnection.doPush(BasePackPushConnection.java:217)
+	at org.eclipse.jgit.transport.TransportHttp$SmartHttpPushConnection.doPush(TransportHttp.java:785)
+	at org.eclipse.jgit.transport.BasePackPushConnection.push(BasePackPushConnection.java:152)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:165)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:190)
+	at org.eclipse.egit.ui.internal.push.PushWizard$PushJob.run(PushWizard.java:298)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.jgit.errors.MissingObjectException: Missing unknown 720cd21f80197845070aeafcf4a35adc13f935c3
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:148)
+	at org.eclipse.jgit.lib.ObjectReader.open(ObjectReader.java:229)
+	at org.eclipse.jgit.revwalk.RevWalk.parseAny(RevWalk.java:809)
+	at org.eclipse.jgit.internal.storage.pack.PackWriterBitmapWalker.findObjects(PackWriterBitmapWalker.java:95)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.findObjectsToPackUsingBitmaps(PackWriter.java:1847)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.findObjectsToPack(PackWriter.java:1665)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.preparePack(PackWriter.java:797)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.preparePack(PackWriter.java:760)
+	at org.eclipse.jgit.transport.BasePackPushConnection.writePack(BasePackPushConnection.java:300)
+	at org.eclipse.jgit.transport.BasePackPushConnection.doPush(BasePackPushConnection.java:197)
+	... 7 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2014-02-05 01:34:01.855
+!MESSAGE Can't connect to any repository: https://github.com/badver/canyonbunny.git (https://github.com/badver/canyonbunny.git: Missing unknown 720cd21f80197845070aeafcf4a35adc13f935c3)
