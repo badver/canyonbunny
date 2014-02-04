@@ -5,4 +5,5 @@
 <fullyQualifiedTypeName name="ru.badver.study.canyonbunny.game.WorldRenderer"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Pixmap.Format"/>
 <fullyQualifiedTypeName name="ru.badver.study.canyonbunny.util.Constants"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Input.Keys"/>
 </qualifiedTypeNameHistroy>

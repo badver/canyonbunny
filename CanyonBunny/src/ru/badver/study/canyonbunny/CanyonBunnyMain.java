@@ -1,11 +1,13 @@
 package ru.badver.study.canyonbunny;
 
+import ru.badver.study.canyonbunny.game.Assets;
 import ru.badver.study.canyonbunny.game.WorldController;
 import ru.badver.study.canyonbunny.game.WorldRenderer;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL10;
 
 public class CanyonBunnyMain implements ApplicationListener {
@@ -19,19 +21,20 @@ public class CanyonBunnyMain implements ApplicationListener {
 		// set log level to debug
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
+		// Load assets
+		Assets.instance.init(new AssetManager());
+
 		// initialize controller & renderer
 		worldController = new WorldController();
 		worldRenderer = new WorldRenderer(worldController);
 
 		// Game world is active on start
 		paused = false;
-
 	}
 
 	@Override
 	public void resize(int width, int height) {
 		worldRenderer.resize(width, height);
-
 	}
 
 	@Override
@@ -57,19 +60,17 @@ public class CanyonBunnyMain implements ApplicationListener {
 	@Override
 	public void pause() {
 		paused = true;
-
 	}
 
 	@Override
 	public void resume() {
+		Assets.instance.init(new AssetManager());
 		paused = false;
-
 	}
 
 	@Override
 	public void dispose() {
 		worldRenderer.dispose();
-
+		Assets.instance.dispose();
 	}
-
 }
