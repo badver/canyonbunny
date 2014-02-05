@@ -1,5 +1,0 @@
-package ru.badver.study.canyonbunny.game.objects;
-
-public abstract class AbstractGameObject {
-
-}
