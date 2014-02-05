@@ -5,10 +5,12 @@ import ru.badver.study.canyonbunny.game.objects.BunnyHead.JUMP_STATE;
 import ru.badver.study.canyonbunny.game.objects.Feather;
 import ru.badver.study.canyonbunny.game.objects.GoldCoin;
 import ru.badver.study.canyonbunny.game.objects.Rock;
+import ru.badver.study.canyonbunny.screens.MenuScreen;
 import ru.badver.study.canyonbunny.util.CameraHelper;
 import ru.badver.study.canyonbunny.util.Constants;
 
 import com.badlogic.gdx.Application.ApplicationType;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
@@ -27,6 +29,14 @@ public class WorldController extends InputAdapter {
 	// Rectangles for collision detection
 	private Rectangle r1 = new Rectangle();
 	private Rectangle r2 = new Rectangle();
+
+	// Game
+	private Game game;
+
+	private void backToMenu() {
+		// switch to menu screen
+		game.setScreen(new MenuScreen(game));
+	}
 
 	public boolean isGameOver() {
 		return lives < 0;
@@ -126,7 +136,8 @@ public class WorldController extends InputAdapter {
 		cameraHelper.setTarget(level.bunnyHead);
 	}
 
-	public WorldController() {
+	public WorldController(Game game) {
+		this.game = game;
 		init();
 	}
 
@@ -170,6 +181,11 @@ public class WorldController extends InputAdapter {
 					"Camera follow enabled: " + cameraHelper.hasTarget());
 		}
 
+		// Back to Menu
+		else if (keycode == Keys.ESCAPE || keycode == Keys.BACK) {
+			backToMenu();
+		}
+
 		return false;
 	}
 
@@ -179,7 +195,7 @@ public class WorldController extends InputAdapter {
 		if (isGameOver()) {
 			timeLeftGameOverDelay -= deltaTime;
 			if (timeLeftGameOverDelay < 0)
-				init();
+				backToMenu();
 		} else {
 			handleInputGame(deltaTime);
 		}
