@@ -17,6 +17,10 @@ public class Main {
 			settings.debug = drawDebugOutline;
 			TexturePacker.process(settings, "assets-raw/images",
 					"../CanyonBunny-android/assets/images", "canyonbunny.pack");
+			TexturePacker.process(settings, "assets-raw/images-ui",
+					"../CanyonBunny-android/assets/images",
+					"canyonbunny-ui.pack");
+
 		}
 
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
