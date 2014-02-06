@@ -2,6 +2,7 @@ package ru.badver.study.canyonbunny.screens;
 
 import ru.badver.study.canyonbunny.game.WorldController;
 import ru.badver.study.canyonbunny.game.WorldRenderer;
+import ru.badver.study.canyonbunny.util.GamePreferences;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -47,6 +48,7 @@ public class GameScreen extends AbstractGameScreen {
 
 	@Override
 	public void show() {
+		GamePreferences.instance.load();
 		worldController = new WorldController(game);
 		worldRenderer = new WorldRenderer(worldController);
 		Gdx.input.setCatchBackKey(true);

@@ -1,6 +1,7 @@
 package ru.badver.study.canyonbunny.game;
 
 import ru.badver.study.canyonbunny.util.Constants;
+import ru.badver.study.canyonbunny.util.GamePreferences;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -153,7 +154,8 @@ public class WorldRenderer implements Disposable {
 		renderGuiExtraLive(batch);
 
 		// draw FPS text (anchored to bottom right edge)
-		renderGuiFpsCounter(batch);
+		if (GamePreferences.instance.showFpsCounter)
+			renderGuiFpsCounter(batch);
 
 		// draw game over text
 		renderGuiGameOverMessage(batch);
