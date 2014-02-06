@@ -24,8 +24,8 @@ public class Main {
 		}
 
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-		cfg.title = "CanyonBunny";
-		cfg.useGL20 = false;
+		cfg.title = "Canyon Bunny";
+		cfg.useGL20 = true;
 		cfg.width = 800;
 		cfg.height = 480;
 

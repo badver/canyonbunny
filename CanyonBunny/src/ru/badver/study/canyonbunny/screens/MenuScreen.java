@@ -1,12 +1,14 @@
 package ru.badver.study.canyonbunny.screens;
 
 import ru.badver.study.canyonbunny.game.Assets;
+import ru.badver.study.canyonbunny.screens.transitions.ScreenTransition;
+import ru.badver.study.canyonbunny.screens.transitions.ScreenTransitionFade;
 import ru.badver.study.canyonbunny.util.CharacterSkin;
 import ru.badver.study.canyonbunny.util.Constants;
 import ru.badver.study.canyonbunny.util.GamePreferences;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -58,7 +60,7 @@ public class MenuScreen extends AbstractGameScreen {
 	private boolean debugEnabled = false;
 	private float debugRebuildStage;
 
-	public MenuScreen(Game game) {
+	public MenuScreen(DirectedGame game) {
 		super(game);
 	}
 
@@ -214,7 +216,9 @@ public class MenuScreen extends AbstractGameScreen {
 	}
 
 	private void onPlayClicked() {
-		game.setScreen(new GameScreen(game));
+		ScreenTransition transition = ScreenTransitionFade.init(0.75f);
+		game.setScreen(new GameScreen(game), transition);
+
 	}
 
 	private void onOptionsClicked() {
@@ -266,9 +270,7 @@ public class MenuScreen extends AbstractGameScreen {
 	@Override
 	public void show() {
 		stage = new Stage();
-		Gdx.input.setInputProcessor(stage);
 		rebuildStage();
-
 	}
 
 	@Override
@@ -323,8 +325,9 @@ public class MenuScreen extends AbstractGameScreen {
 				Color.ORANGE)).colspan(2);
 		tbl.row();
 
-		System.out.println("**** CHAR SKIN: "+CharacterSkin.values()[1].toString());
-		
+		System.out.println("**** CHAR SKIN: "
+				+ CharacterSkin.values()[1].toString());
+
 		// + Drop down box filled with skin items
 		selCharSkin = new SelectBox(CharacterSkin.values(), skinLibgdx);
 		selCharSkin.addListener(new ChangeListener() {
@@ -398,6 +401,11 @@ public class MenuScreen extends AbstractGameScreen {
 			}
 		});
 		return tbl;
+	}
+
+	@Override
+	public InputProcessor getInputProcessor() {
+		return stage;
 	}
 
 }

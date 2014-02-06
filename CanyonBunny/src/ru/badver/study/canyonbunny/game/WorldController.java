@@ -5,17 +5,18 @@ import ru.badver.study.canyonbunny.game.objects.BunnyHead.JUMP_STATE;
 import ru.badver.study.canyonbunny.game.objects.Feather;
 import ru.badver.study.canyonbunny.game.objects.GoldCoin;
 import ru.badver.study.canyonbunny.game.objects.Rock;
+import ru.badver.study.canyonbunny.screens.DirectedGame;
 import ru.badver.study.canyonbunny.screens.MenuScreen;
+import ru.badver.study.canyonbunny.screens.transitions.ScreenTransition;
+import ru.badver.study.canyonbunny.screens.transitions.ScreenTransitionSlide;
 import ru.badver.study.canyonbunny.util.CameraHelper;
 import ru.badver.study.canyonbunny.util.Constants;
 
 import com.badlogic.gdx.Application.ApplicationType;
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
-import com.badlogic.gdx.graphics.Pixmap;
-import com.badlogic.gdx.graphics.Pixmap.Format;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.Rectangle;
 
 public class WorldController extends InputAdapter {
@@ -28,16 +29,18 @@ public class WorldController extends InputAdapter {
 	public float livesVisual;
 	public float scoreVisual;
 
+	private DirectedGame game;
+
 	// Rectangles for collision detection
 	private Rectangle r1 = new Rectangle();
 	private Rectangle r2 = new Rectangle();
 
-	// Game
-	private Game game;
-
 	private void backToMenu() {
 		// switch to menu screen
-		game.setScreen(new MenuScreen(game));
+		ScreenTransition transition = ScreenTransitionSlide.init(0.75f,
+				ScreenTransitionSlide.DOWN, false, Interpolation.bounceOut); // bounceOut
+		game.setScreen(new MenuScreen(game), transition);
+
 	}
 
 	public boolean isGameOver() {
@@ -139,7 +142,7 @@ public class WorldController extends InputAdapter {
 		cameraHelper.setTarget(level.bunnyHead);
 	}
 
-	public WorldController(Game game) {
+	public WorldController(DirectedGame game) {
 		this.game = game;
 		init();
 	}
@@ -214,7 +217,7 @@ public class WorldController extends InputAdapter {
 			else
 				initLevel();
 		}
-		
+
 		level.mountains.updateScrollPosition(cameraHelper.getPosition());
 		if (livesVisual > lives)
 			livesVisual = Math.max(lives, livesVisual - 1 * deltaTime);
@@ -267,13 +270,11 @@ public class WorldController extends InputAdapter {
 	}
 
 	private void init() {
-		Gdx.input.setInputProcessor(this);
 		cameraHelper = new CameraHelper();
 		lives = Constants.LIVES_START;
 		livesVisual = lives;
 		timeLeftGameOverDelay = 0;
 		initLevel();
-
 	}
 
 }
