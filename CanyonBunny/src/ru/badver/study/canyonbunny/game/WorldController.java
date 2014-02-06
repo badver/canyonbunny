@@ -25,6 +25,7 @@ public class WorldController extends InputAdapter {
 	public int lives;
 	public int score;
 	private float timeLeftGameOverDelay;
+	public float livesVisual;
 
 	// Rectangles for collision detection
 	private Rectangle r1 = new Rectangle();
@@ -212,6 +213,8 @@ public class WorldController extends InputAdapter {
 				initLevel();
 		}
 		level.mountains.updateScrollPosition(cameraHelper.getPosition());
+		if (livesVisual > lives)
+			livesVisual = Math.max(lives, livesVisual - 1 * deltaTime);
 	}
 
 	private void handleDebugInput(float deltaTime) {
@@ -260,6 +263,7 @@ public class WorldController extends InputAdapter {
 		Gdx.input.setInputProcessor(this);
 		cameraHelper = new CameraHelper();
 		lives = Constants.LIVES_START;
+		livesVisual = lives;
 		timeLeftGameOverDelay = 0;
 		initLevel();
 
