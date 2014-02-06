@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Disposable;
 
 public class WorldRenderer implements Disposable {
@@ -102,16 +103,27 @@ public class WorldRenderer implements Disposable {
 	private void renderGuiScore(SpriteBatch batch) {
 		float x = -15;
 		float y = -15;
-		batch.draw(Assets.instance.goldCoin.goldCoin, x, y, 50, 50, 100, 100,
-				0.35f, -0.35f, 0);
-		Assets.instance.fonts.defaultBig.draw(batch,
-				"" + worldController.score, x + 75, y + 37);
+		float offsetX = 50;
+		float offsetY = 50;
+		
+		if (worldController.scoreVisual < worldController.score) {
+			long shakeAlpha = System.currentTimeMillis() % 360;
+			float shakeDist = 1.5f;
+			offsetX += MathUtils.sinDeg(shakeAlpha * 2.2f) * shakeDist;
+			offsetY += MathUtils.sinDeg(shakeAlpha * 2.9f) * shakeDist;
+		}
+		
+		batch.draw(Assets.instance.goldCoin.goldCoin, x, y, offsetX, offsetY,
+				100, 100, 0.35f, -0.35f, 0);
+		
+		Assets.instance.fonts.defaultBig.draw(batch, ""
+				+ (int) worldController.scoreVisual, x + 75, y + 37);
 	}
 
 	private void renderGuiExtraLive(SpriteBatch batch) {
 		float x = cameraGUI.viewportWidth - 50 - Constants.LIVES_START * 50;
 		float y = -15;
-		
+
 		for (int i = 0; i < Constants.LIVES_START; i++) {
 			if (worldController.lives <= i)
 				batch.setColor(0.5f, 0.5f, 0.5f, 0.5f);
@@ -119,7 +131,7 @@ public class WorldRenderer implements Disposable {
 					100, 0.35f, -0.35f, 0);
 			batch.setColor(1, 1, 1, 1);
 		}
-		
+
 		if (worldController.lives >= 0
 				&& worldController.livesVisual > worldController.lives) {
 			int i = worldController.lives;
