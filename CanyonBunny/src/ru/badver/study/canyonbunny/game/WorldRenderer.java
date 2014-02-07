@@ -7,9 +7,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.utils.Disposable;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 
 public class WorldRenderer implements Disposable {
 	private OrthographicCamera camera;
@@ -18,6 +20,7 @@ public class WorldRenderer implements Disposable {
 	private WorldController worldController;
 	private static final boolean DEBUG_DRAW_BOX2D_WORLD = false;
 	private Box2DDebugRenderer b2debugRenderer;
+	private ShaderProgram shaderMonochrome;
 
 	public WorldRenderer(WorldController worldController) {
 		this.worldController = worldController;
@@ -71,15 +74,31 @@ public class WorldRenderer implements Disposable {
 		cameraGUI.setToOrtho(true); // flip y-axis
 		cameraGUI.update();
 		b2debugRenderer = new Box2DDebugRenderer();
+
+		shaderMonochrome = new ShaderProgram(
+				Gdx.files.internal(Constants.shaderMonochromeVertex),
+				Gdx.files.internal(Constants.shaderMonochromeFragment));
+		if (!shaderMonochrome.isCompiled()) {
+			String msg = "Could not compile shader program: "
+					+ shaderMonochrome.getLog();
+			throw new GdxRuntimeException(msg);
+		}
+
 	}
 
 	private void renderWorld(SpriteBatch batch) {
 		worldController.cameraHelper.applyTo(camera);
 		batch.setProjectionMatrix(camera.combined);
+
 		batch.begin();
+		if (GamePreferences.instance.useMonochromeShader) {
+			batch.setShader(shaderMonochrome);
+			shaderMonochrome.setUniformf("u_amount", 1.0f);
+		}
 		worldController.level.render(batch);
+		batch.setShader(null);
 		batch.end();
-		
+
 		if (DEBUG_DRAW_BOX2D_WORLD) {
 			b2debugRenderer.render(worldController.b2world, camera.combined);
 		}
@@ -105,6 +124,7 @@ public class WorldRenderer implements Disposable {
 	@Override
 	public void dispose() {
 		batch.dispose();
+		shaderMonochrome.dispose();
 	}
 
 	private void renderGuiScore(SpriteBatch batch) {

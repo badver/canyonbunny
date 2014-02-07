@@ -54,4 +54,8 @@ public class Constants {
 	public static final float ACCEL_MAX_ANGLE_MAX_MOVEMENT = 20.0f;
 
 
+	// Shader
+	public static final String shaderMonochromeVertex = "shaders/monochrome.vs";
+	public static final String shaderMonochromeFragment = "shaders/monochrome.fs";
+
 }
