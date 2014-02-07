@@ -3,6 +3,7 @@ package ru.badver.study.canyonbunny.screens;
 import ru.badver.study.canyonbunny.game.Assets;
 import ru.badver.study.canyonbunny.screens.transitions.ScreenTransition;
 import ru.badver.study.canyonbunny.screens.transitions.ScreenTransitionFade;
+import ru.badver.study.canyonbunny.util.AudioManager;
 import ru.badver.study.canyonbunny.util.CharacterSkin;
 import ru.badver.study.canyonbunny.util.Constants;
 import ru.badver.study.canyonbunny.util.GamePreferences;
@@ -95,12 +96,14 @@ public class MenuScreen extends AbstractGameScreen {
 	private void onSaveClicked() {
 		saveSettings();
 		onCancelClicked();
+		AudioManager.instance.onSettingsUpdated();
 	}
 
 	private void onCancelClicked() {
 		btnMenuPlay.setVisible(true);
 		btnMenuOptions.setVisible(true);
 		winOptions.setVisible(false);
+		AudioManager.instance.onSettingsUpdated();
 	}
 
 	@Override

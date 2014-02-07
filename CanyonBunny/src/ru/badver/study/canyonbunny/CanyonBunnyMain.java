@@ -5,6 +5,8 @@ import ru.badver.study.canyonbunny.screens.DirectedGame;
 import ru.badver.study.canyonbunny.screens.MenuScreen;
 import ru.badver.study.canyonbunny.screens.transitions.ScreenTransition;
 import ru.badver.study.canyonbunny.screens.transitions.ScreenTransitionSlice;
+import ru.badver.study.canyonbunny.util.AudioManager;
+import ru.badver.study.canyonbunny.util.GamePreferences;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
@@ -20,6 +22,10 @@ public class CanyonBunnyMain extends DirectedGame {
 
 		// Load assets
 		Assets.instance.init(new AssetManager());
+
+		// Load preferences for audio settings and start playing music
+		GamePreferences.instance.load();
+		AudioManager.instance.play(Assets.instance.music.song01);
 
 		// Start game at menu screen
 		ScreenTransition transition = ScreenTransitionSlice.init(2,
