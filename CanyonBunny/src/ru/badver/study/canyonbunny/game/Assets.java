@@ -6,14 +6,14 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetErrorListener;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.utils.Disposable;
-import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.audio.Sound;
 
 public class Assets implements Disposable, AssetErrorListener {
 	public static final String TAG = Assets.class.getName();
@@ -165,6 +165,8 @@ public class Assets implements Disposable, AssetErrorListener {
 		public final AtlasRegion mountainLeft;
 		public final AtlasRegion mountainRight;
 		public final AtlasRegion waterOverlay;
+		public final AtlasRegion carrot;
+		public final AtlasRegion goal;
 
 		public AssetLevelDecoration(TextureAtlas atlas) {
 			cloud01 = atlas.findRegion("cloud01");
@@ -173,6 +175,9 @@ public class Assets implements Disposable, AssetErrorListener {
 			mountainLeft = atlas.findRegion("mountain_left");
 			mountainRight = atlas.findRegion("mountain_right");
 			waterOverlay = atlas.findRegion("water_overlay");
+			carrot = atlas.findRegion("carrot");
+			goal = atlas.findRegion("goal");
+
 		}
 	}
 
