@@ -153,7 +153,7 @@ public class Assets implements Disposable, AssetErrorListener {
 			head = atlas.findRegion("bunny_head");
 			
 			Array<AtlasRegion> regions = null;
-			AtlasRegion region = null;
+			//AtlasRegion region = null;
 			
 			// Animation: Bunny Normal
 			regions = atlas.findRegions("anim_bunny_normal");

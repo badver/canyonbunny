@@ -8,18 +8,22 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 
 public class Rock extends AbstractGameObject {
-	private TextureRegion regEdge;
-	private TextureRegion regMiddle;
-	private int length;
-
-	private final float FLOAT_CYCLE_TIME = 2.0f;
 	private final float FLOAT_AMPLITUDE = 0.25f;
+	private final float FLOAT_CYCLE_TIME = 2.0f;
 	private float floatCycleTimeLeft;
+
 	private boolean floatingDownwards;
 	private Vector2 floatTargetPosition;
+	private int length;
+	private TextureRegion regEdge;
+	private TextureRegion regMiddle;
 
 	public Rock() {
 		init();
+	}
+
+	public void increaseLength(int amount) {
+		setLength(length + amount);
 	}
 
 	private void init() {
@@ -33,17 +37,6 @@ public class Rock extends AbstractGameObject {
 		floatingDownwards = false;
 		floatCycleTimeLeft = MathUtils.random(0, FLOAT_CYCLE_TIME / 2);
 		floatTargetPosition = null;
-	}
-
-	public void setLength(int length) {
-		this.length = length;
-		// Update bounding box for collision detection
-		bounds.set(0, 0, dimension.x * length, dimension.y);
-
-	}
-
-	public void increaseLength(int amount) {
-		setLength(length + amount);
 	}
 
 	@Override
@@ -79,6 +72,13 @@ public class Rock extends AbstractGameObject {
 				dimension.y, scale.x, scale.y, rotation, reg.getRegionX(),
 				reg.getRegionY(), reg.getRegionWidth(), reg.getRegionHeight(),
 				true, false);
+
+	}
+
+	public void setLength(int length) {
+		this.length = length;
+		// Update bounding box for collision detection
+		bounds.set(0, 0, dimension.x * length, dimension.y);
 
 	}
 

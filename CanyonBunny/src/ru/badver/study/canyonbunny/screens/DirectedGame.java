@@ -10,54 +10,42 @@ import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 
 public abstract class DirectedGame implements ApplicationListener {
 
-	private boolean init;
-	private AbstractGameScreen currScreen;
-	private AbstractGameScreen nextScreen;
-	private FrameBuffer currFbo;
-	private FrameBuffer nextFbo;
 	private SpriteBatch batch;
-	private float t;
+	private FrameBuffer currFbo;
+	private AbstractGameScreen currScreen;
+	private boolean init;
+	private FrameBuffer nextFbo;
+	private AbstractGameScreen nextScreen;
 	private ScreenTransition screenTransition;
-
-	public void setScreen(AbstractGameScreen screen) {
-		setScreen(screen, null);
-	}
-
-	public void setScreen(AbstractGameScreen screen,
-			ScreenTransition screenTransition) {
-		int w = Gdx.graphics.getWidth();
-		int h = Gdx.graphics.getHeight();
-		if (!init) {
-			currFbo = new FrameBuffer(Format.RGB888, w, h, false);
-			nextFbo = new FrameBuffer(Format.RGB888, w, h, false);
-			batch = new SpriteBatch();
-			init = true;
-		}
-		// start new transition
-		nextScreen = screen;
-		nextScreen.show(); // activate next screen
-		nextScreen.resize(w, h);
-		nextScreen.render(0); // let screen update() once
-		if (currScreen != null)
-			currScreen.pause();
-		nextScreen.pause();
-		Gdx.input.setInputProcessor(null); // disable input
-		this.screenTransition = screenTransition;
-		t = 0;
-	}
+	private float t;
 
 	@Override
 	public void create() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
-	public void resize(int width, int height) {
+	public void dispose() {
 		if (currScreen != null)
-			currScreen.resize(width, height);
+			currScreen.hide();
+		
 		if (nextScreen != null)
-			nextScreen.resize(width, height);
+			nextScreen.hide();
+		
+		if (init) {
+			currFbo.dispose();
+			currScreen = null;
+			nextFbo.dispose();
+			nextScreen = null;
+			batch.dispose();
+			init = false;
+		}
+	}
+
+	@Override
+	public void pause() {
+		if (currScreen != null)
+			currScreen.pause();
 
 	}
 
@@ -105,9 +93,11 @@ public abstract class DirectedGame implements ApplicationListener {
 	}
 
 	@Override
-	public void pause() {
+	public void resize(int width, int height) {
 		if (currScreen != null)
-			currScreen.pause();
+			currScreen.resize(width, height);
+		if (nextScreen != null)
+			nextScreen.resize(width, height);
 
 	}
 
@@ -118,21 +108,31 @@ public abstract class DirectedGame implements ApplicationListener {
 
 	}
 
-	@Override
-	public void dispose() {
-		if (currScreen != null)
-			currScreen.hide();
-		if (nextScreen != null)
-			nextScreen.hide();
-		if (init) {
-			currFbo.dispose();
-			currScreen = null;
-			nextFbo.dispose();
-			nextScreen = null;
-			batch.dispose();
-			init = false;
-		}
+	public void setScreen(AbstractGameScreen screen) {
+		setScreen(screen, null);
+	}
 
+	public void setScreen(AbstractGameScreen screen,
+			ScreenTransition screenTransition) {
+		int w = Gdx.graphics.getWidth();
+		int h = Gdx.graphics.getHeight();
+		if (!init) {
+			currFbo = new FrameBuffer(Format.RGB888, w, h, false);
+			nextFbo = new FrameBuffer(Format.RGB888, w, h, false);
+			batch = new SpriteBatch();
+			init = true;
+		}
+		// start new transition
+		nextScreen = screen;
+		nextScreen.show(); // activate next screen
+		nextScreen.resize(w, h);
+		nextScreen.render(0); // let screen update() once
+		if (currScreen != null)
+			currScreen.pause();
+		nextScreen.pause();
+		Gdx.input.setInputProcessor(null); // disable input
+		this.screenTransition = screenTransition;
+		t = 0;
 	}
 
 }
