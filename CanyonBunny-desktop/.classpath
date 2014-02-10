@@ -5,8 +5,8 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/CanyonBunny"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl.jar" sourcepath="libs/gdx-backend-lwjgl-sources.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-natives.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-natives.jar" sourcepath="/home/user/workspaces/libgdx.rep/backends/gdx-backend-lwjgl/src/com/badlogic/gdx/backends/lwjgl"/>
 	<classpathentry kind="lib" path="libs/gdx-natives.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-tools.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-tools.jar" sourcepath="/home/user/workspaces/libgdx/libgdx/extensions/gdx-tools/sources/gdx-tools-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
