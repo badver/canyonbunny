@@ -30,10 +30,10 @@ public class Main {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.title = "Canyon Bunny";
 		cfg.useGL20 = true;
-		cfg.width = 800;
-		cfg.height = 480;
+		cfg.width = 1480;
+		cfg.height = 800;
 		cfg.fullscreen=false;
-		cfg.resizable=false;
+		cfg.resizable=true;
 		
 
 		new LwjglApplication(new CanyonBunnyMain(), cfg);

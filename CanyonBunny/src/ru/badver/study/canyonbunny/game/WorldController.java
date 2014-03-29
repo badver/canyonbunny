@@ -180,14 +180,14 @@ public class WorldController extends InputAdapter implements Disposable {
 					+ bunnyHead.origin.y;
 			break;
 		}
-	};
+	}
 
 	private void onCollisionBunnyWithGoldCoin(GoldCoin goldcoin) {
 		goldcoin.collected = true;
 		AudioManager.instance.play(Assets.instance.sounds.pickupCoin);
 		score += goldcoin.getScore();
 		Gdx.app.log(TAG, "Gold coin collected");
-	};
+	}
 
 	private void onCollisionBunnyWithFeather(Feather feather) {
 		feather.collected = true;
@@ -195,7 +195,7 @@ public class WorldController extends InputAdapter implements Disposable {
 		score += feather.getScore();
 		level.bunnyHead.setFeatherPowerup(true);
 		Gdx.app.log(TAG, "Feather collected");
-	};
+	}
 
 	private void testCollisions() {
 		r1.set(level.bunnyHead.position.x, level.bunnyHead.position.y,

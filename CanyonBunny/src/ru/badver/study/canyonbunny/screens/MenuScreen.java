@@ -199,7 +199,7 @@ public class MenuScreen extends AbstractGameScreen {
 		Interpolation moveEasing = Interpolation.swing;
 		float delayOptionsButton = 0.25f;
 		float moveX = 300 * (visible ? -1 : 1);
-		float moveY = 0 * (visible ? -1 : 1);
+		float moveY = 10 * (visible ? -1 : 1);
 		final Touchable touchEnabled = visible ? Touchable.enabled
 				: Touchable.disabled;
 		btnMenuPlay.addAction(moveBy(moveX, moveY, moveDuration, moveEasing));

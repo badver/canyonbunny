@@ -20,11 +20,9 @@ public abstract class DirectedGame implements ApplicationListener {
 	private float t;
 
 	@Override
-	public void create() {
-		// TODO Auto-generated method stub
-	}
+	public abstract void create();
 
-	@Override
+    @Override
 	public void dispose() {
 		if (currScreen != null)
 			currScreen.hide();
