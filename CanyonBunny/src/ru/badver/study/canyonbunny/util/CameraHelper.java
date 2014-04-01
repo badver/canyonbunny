@@ -3,7 +3,6 @@ package ru.badver.study.canyonbunny.util;
 import ru.badver.study.canyonbunny.game.objects.AbstractGameObject;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 

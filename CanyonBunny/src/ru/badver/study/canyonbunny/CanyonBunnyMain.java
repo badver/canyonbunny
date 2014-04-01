@@ -10,6 +10,7 @@ import ru.badver.study.canyonbunny.util.GamePreferences;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Version;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.math.Interpolation;
 
@@ -19,6 +20,7 @@ public class CanyonBunnyMain extends DirectedGame {
 	public void create() {
 		// Set Libgdx log level
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
+		Gdx.app.log("VERSION", Version.VERSION);
 
 		// Load assets
 		Assets.instance.init(new AssetManager());

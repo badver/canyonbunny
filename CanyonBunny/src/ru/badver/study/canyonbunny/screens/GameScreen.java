@@ -6,7 +6,7 @@ import ru.badver.study.canyonbunny.util.GamePreferences;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GL20;
 
 public class GameScreen extends AbstractGameScreen {
 
@@ -34,7 +34,7 @@ public class GameScreen extends AbstractGameScreen {
 				0xff / 255.0f);
 
 		// Clears the screen
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		// Render game world to screen
 		worldRenderer.render();
